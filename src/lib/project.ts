@@ -47,15 +47,16 @@ export const IMAGES = {
 };
 
 export const FLOOR_PLANS: { id: string; label: string; image: string }[] = [
-  { id: 'lgf-b1', label: 'Lower Ground Floor / Basement-1', image: 'https://images.pexels.com/photos/4458205/pexels-photo-4458205.jpeg?auto=compress&cs=tinysrgb&h=900' },
-  { id: 'gf', label: 'Ground Floor', image: 'https://images.pexels.com/photos/4792483/pexels-photo-4792483.jpeg?auto=compress&cs=tinysrgb&h=900' },
-  { id: '1f', label: 'First Floor', image: 'https://images.pexels.com/photos/9052461/pexels-photo-9052461.jpeg?auto=compress&cs=tinysrgb&h=900' },
-  { id: '2f', label: 'Second Floor', image: 'https://images.pexels.com/photos/4458196/pexels-photo-4458196.jpeg?auto=compress&cs=tinysrgb&h=900' },
-  { id: '3f', label: 'Third Floor', image: 'https://images.pexels.com/photos/4458210/pexels-photo-4458210.jpeg?auto=compress&cs=tinysrgb&h=900' },
-  { id: '4f', label: 'Fourth Floor (Food Court / Restaurant)', image: 'https://images.pexels.com/photos/4458193/pexels-photo-4458193.jpeg?auto=compress&cs=tinysrgb&h=900' },
-  { id: '5f', label: 'Fifth Floor', image: 'https://images.pexels.com/photos/4458205/pexels-photo-4458205.jpeg?auto=compress&cs=tinysrgb&h=900&dpr=2' },
-  { id: '7f', label: 'Seventh Floor', image: 'https://images.pexels.com/photos/4792483/pexels-photo-4792483.jpeg?auto=compress&cs=tinysrgb&h=900&dpr=2' },
-  { id: 'studio-typical', label: 'Typical Studio Floor', image: 'https://images.pexels.com/photos/9052461/pexels-photo-9052461.jpeg?auto=compress&cs=tinysrgb&h=900&dpr=2' },
+  {
+    id: 'lgf-b1',
+    label: 'Lower Ground Floor / Basement-1',
+    image: '/floor-plans/lower-ground-b1.png',
+  },
+  {
+    id: 'gf',
+    label: 'Ground Floor',
+    image: '/floor-plans/ground-floor.png',
+  },
 ];
 
 export type FloorPricing = {

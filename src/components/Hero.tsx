@@ -76,14 +76,14 @@ export default function Hero({ onNavigate, onBrochure, onWhatsApp }: HeroProps) 
       </div>
 
       {/* Scroll cue */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-navy-200">
+      <div className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 text-navy-200 sm:block">
         <div className="flex h-10 w-6 justify-center rounded-full border border-white/20 pt-2">
           <span className="h-2 w-1 animate-bounce rounded-full bg-gold-300" />
         </div>
       </div>
 
       {/* Developer strip */}
-      <div className="absolute bottom-0 inset-x-0 border-t border-white/10 bg-navy-950/70 backdrop-blur-md">
+      <div className="relative mt-8 border-t border-white/10 bg-navy-950/70 backdrop-blur-md sm:absolute sm:bottom-0 sm:inset-x-0 sm:mt-0">
         <div className="container-x flex flex-col items-center justify-between gap-2 py-3 text-center text-xs text-navy-200 sm:flex-row sm:text-left">
           <span>By {BRAND.developer}</span>
           <span className="text-gold-300/90">RERA: {CONTACT.rera}</span>

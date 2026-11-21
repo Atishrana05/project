@@ -23,7 +23,7 @@ export default function FloatingActions({ onWhatsApp }: FloatingActionsProps) {
       <div className="fixed inset-x-0 bottom-0 z-50 border-t border-gold-400/20 bg-navy-950/95 px-3 pt-3 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] shadow-[0_-8px_30px_rgba(0,0,0,0.3)] backdrop-blur-xl sm:hidden">
         <div className="mx-auto flex max-w-xl gap-3">
           <a
-            href={`tel:${CONTACT.phones[0].replace(/\\s/g, '')}`}
+            href={`tel:${CONTACT.phones[0].replace(/\s/g, '')}`}
             className="flex min-h-12 flex-1 items-center justify-center gap-2 rounded-xl border border-gold-400/50 bg-white/5 px-3 text-sm font-semibold text-gold-200 transition active:scale-[0.98]"
           >
             <Phone className="h-4 w-4" />
@@ -54,7 +54,7 @@ export default function FloatingActions({ onWhatsApp }: FloatingActionsProps) {
                 {CONTACT.phones.map((p) => (
                   <a
                     key={p}
-                    href={`tel:${p.replace(/\\s/g, '')}`}
+                    href={`tel:${p.replace(/\s/g, '')}`}
                     className="flex items-center gap-2 rounded-lg bg-white/5 px-3 py-2 text-sm text-navy-100 transition hover:bg-white/10 hover:text-white"
                   >
                     <Phone className="h-4 w-4 text-gold-300" /> {p}

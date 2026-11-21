@@ -48,7 +48,7 @@ export default function Marketing({ onAdmin }: MarketingProps) {
     <div className="relative pb-20 sm:pb-0">
       <Navbar onNavigate={scrollTo} onAdmin={onAdmin} />
 
-      <main>
+      <main className="site-main">
         <Hero onNavigate={scrollTo} onBrochure={() => setBrochureOpen(true)} onWhatsApp={openWhatsApp} />
         <About />
         <Experience onEnquire={() => openEnquiry(undefined, 'brochure')} />

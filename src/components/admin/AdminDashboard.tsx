@@ -186,9 +186,7 @@ export default function AdminDashboard({ onSignOut, onBack }: AdminDashboardProp
       <header className="sticky top-0 z-30 border-b border-white/10 bg-navy-950/90 backdrop-blur-xl">
         <div className="container-x flex h-16 items-center justify-between">
           <div className="flex items-center gap-3">
-            <span className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-gold-300 to-gold-500 text-navy-950">
-              <Users className="h-4 w-4" />
-            </span>
+            <img src="/kb-west-walk-logo.svg" alt="KB West Walk logo" className="h-10 w-10 rounded-lg bg-white object-contain" />
             <div>
               <h1 className="font-display text-base font-semibold text-white">{BRAND.name} · Admin</h1>
               <p className="text-[10px] text-gold-300/80">Lead Dashboard</p>

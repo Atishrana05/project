@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Menu, X, Building2 } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { BRAND } from '@/lib/project';
 
 type NavbarProps = {
@@ -38,17 +38,15 @@ export default function Navbar({ onNavigate, onAdmin }: NavbarProps) {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? 'bg-navy-950/90 shadow-soft backdrop-blur-xl'
-          : 'bg-gradient-to-b from-navy-950/60 to-transparent'
+          ? 'bg-white/95 shadow-soft backdrop-blur-xl'
+          : 'bg-gradient-to-b from-white/95 to-white/70'
       }`}
     >
       <nav className="container-x flex h-16 items-center justify-between lg:h-20">
         <button onClick={() => go('home')} className="flex items-center gap-3 text-left">
-          <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-gold-300 to-gold-500 text-navy-950 shadow-glow-gold">
-            <Building2 className="h-5 w-5" />
-          </span>
+          <img src="/kb-west-walk-logo.svg" alt="KB West Walk logo" className="h-12 w-12 rounded-lg bg-white object-contain" />
           <span className="flex flex-col leading-none">
-            <span className="font-display text-lg font-semibold tracking-wide text-white">
+            <span className="font-display text-lg font-semibold tracking-wide text-navy-50">
               {BRAND.name}
             </span>
             <span className="text-[10px] uppercase tracking-[0.2em] text-gold-300/80">
@@ -81,7 +79,7 @@ export default function Navbar({ onNavigate, onAdmin }: NavbarProps) {
 
         <button
           onClick={() => setOpen((v) => !v)}
-          className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 text-white lg:hidden"
+          className="grid h-10 w-10 place-items-center rounded-lg border border-navy-700 text-navy-50 lg:hidden"
           aria-label="Toggle menu"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -89,7 +87,7 @@ export default function Navbar({ onNavigate, onAdmin }: NavbarProps) {
       </nav>
 
       {open && (
-        <div className="border-t border-white/10 bg-navy-950/95 backdrop-blur-xl lg:hidden">
+        <div className="border-t border-navy-700 bg-white/98 backdrop-blur-xl lg:hidden">
           <ul className="container-x flex flex-col gap-1 py-4">
             {LINKS.map((l) => (
               <li key={l.id}>

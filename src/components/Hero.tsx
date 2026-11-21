@@ -27,7 +27,7 @@ export default function Hero({ onNavigate, onBrochure, onWhatsApp }: HeroProps) 
 
       <div className="relative z-10 flex min-h-[100svh] flex-col justify-center pt-24">
         <div className="container-x max-w-3xl">
-          <p className="section-eyebrow animate-fade-up">
+          <p className="section-eyebrow !text-white animate-fade-up">
             <span className="h-1.5 w-1.5 rounded-full bg-gold-400" />
             Greater Noida West · Ecotech-12
           </p>
@@ -38,7 +38,7 @@ export default function Hero({ onNavigate, onBrochure, onWhatsApp }: HeroProps) 
             {BRAND.tagline}
           </h1>
           <p
-            className="mt-6 max-w-xl text-lg leading-relaxed text-navy-100 animate-fade-up"
+            className="mt-6 max-w-xl text-lg leading-relaxed text-white/95 drop-shadow-md animate-fade-up"
             style={{ animationDelay: '160ms' }}
           >
             {BRAND.subheadline}
@@ -61,15 +61,15 @@ export default function Hero({ onNavigate, onBrochure, onWhatsApp }: HeroProps) 
 
           {/* Quick contact strip */}
           <div
-            className="mt-10 hidden flex-wrap items-center gap-4 text-sm text-navy-200 animate-fade-up sm:flex"
+            className="mt-10 hidden flex-wrap items-center gap-3 text-sm animate-fade-up sm:flex"
             style={{ animationDelay: '320ms' }}
           >
-            <a href={`tel:${CONTACT.phones[0]}`} className="inline-flex items-center gap-2 transition hover:text-gold-200">
-              <Phone className="h-4 w-4 text-gold-300" /> {CONTACT.phones[0]}
+            <a href={`tel:${CONTACT.phones[0]}`} className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white px-4 py-2.5 font-semibold text-[#12364b] shadow-lg transition hover:bg-[#eaf2f7]">
+              <Phone className="h-4 w-4 text-[#28516a]" /> {CONTACT.phones[0]}
             </a>
-            <span className="h-3 w-px bg-white/15" />
-            <button onClick={onWhatsApp} className="inline-flex items-center gap-2 transition hover:text-gold-200">
-              <MessageCircle className="h-4 w-4 text-gold-300" /> WhatsApp Enquiry
+            <span className="hidden h-3 w-px bg-white/30" />
+            <button onClick={onWhatsApp} className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white px-4 py-2.5 font-semibold text-[#12364b] shadow-lg transition hover:bg-[#eaf2f7]">
+              <MessageCircle className="h-4 w-4 text-[#28516a]" /> WhatsApp Enquiry
             </button>
           </div>
         </div>

@@ -20,18 +20,18 @@ export default function FloatingActions({ onWhatsApp }: FloatingActionsProps) {
   return (
     <>
       {/* Always-visible mobile contact bar */}
-      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-gold-400/20 bg-navy-950/95 px-3 pt-3 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] shadow-[0_-8px_30px_rgba(0,0,0,0.3)] backdrop-blur-xl sm:hidden">
+      <div className="fixed inset-x-0 bottom-0 z-50 border-t border-[#28516a]/20 bg-white/95 px-3 pt-3 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] shadow-[0_-8px_30px_rgba(0,0,0,0.3)] backdrop-blur-xl sm:hidden">
         <div className="mx-auto flex max-w-xl gap-3">
           <a
             href={`tel:${CONTACT.phones[0].replace(/\s/g, '')}`}
-            className="flex min-h-12 flex-1 items-center justify-center gap-2 rounded-xl border border-gold-400/50 bg-white/5 px-3 text-sm font-semibold text-gold-200 transition active:scale-[0.98]"
+            className="flex min-h-12 flex-1 items-center justify-center gap-2 rounded-xl border border-[#28516a]/40 bg-white px-3 text-sm font-semibold text-[#28516a] transition active:scale-[0.98]"
           >
             <Phone className="h-4 w-4" />
             Call Now
           </a>
           <button
             onClick={onWhatsApp}
-            className="flex min-h-12 flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-gold-300 to-gold-500 px-3 text-sm font-semibold text-navy-950 transition active:scale-[0.98]"
+            className="flex min-h-12 flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#28516a] to-[#12364b] px-3 text-sm font-semibold text-white transition active:scale-[0.98]"
           >
             <MessageCircle className="h-4 w-4" />
             WhatsApp Enquiry

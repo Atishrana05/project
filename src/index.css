@@ -102,3 +102,63 @@ footer .bg-white\/\[0\.03\],
 .site-main > section:not(#home) .bg-white\/\[0\.03\] {
   background: #f2f7fa !important;
 }
+
+
+/* Contrast and legibility pass for the white + blue brand */
+@layer components {
+  .btn-gold {
+    background: linear-gradient(110deg, #28516a, #12364b) !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 22px rgba(18, 54, 75, 0.18) !important;
+  }
+  .btn-gold:hover {
+    background: #0d2d40 !important;
+    color: #ffffff !important;
+  }
+  .btn-outline {
+    border-color: #28516a !important;
+    background: #ffffff !important;
+    color: #12364b !important;
+  }
+  .btn-outline:hover {
+    border-color: #12364b !important;
+    background: #eaf2f7 !important;
+    color: #0d2d40 !important;
+  }
+  .btn-ghost {
+    color: #12364b !important;
+  }
+}
+.site-main > section:not(#home) .text-navy-100,
+.site-main > section:not(#home) .text-navy-200,
+.site-main > section:not(#home) .text-navy-300,
+footer .text-navy-100,
+footer .text-navy-200,
+footer .text-navy-300 {
+  color: #294b60 !important;
+}
+.site-main > section:not(#home) .text-gold-200,
+.site-main > section:not(#home) .text-gold-300,
+.site-main > section:not(#home) .text-gold-400,
+footer .text-gold-200,
+footer .text-gold-300,
+footer .text-gold-400 {
+  color: #174765 !important;
+}
+.site-main > section:not(#home) .text-white,
+footer .text-white,
+footer .text-navy-50 {
+  color: #12364b !important;
+}
+header .text-navy-50,
+header .text-navy-100 {
+  color: #12364b !important;
+}
+header .text-gold-300,
+header .text-gold-200 {
+  color: #28516a !important;
+}
+footer button,
+footer a {
+  color: #294b60;
+}

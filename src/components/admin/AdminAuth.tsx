@@ -1,6 +1,6 @@
 
 import { useState, type FormEvent } from 'react';
-import { Loader2, Lock, Mail, Building2, ArrowLeft } from 'lucide-react';
+import { Loader2, Lock, Mail, ArrowLeft } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 import { BRAND } from '@/lib/project';
 
@@ -57,12 +57,10 @@ export default function AdminAuth({ onSuccess, onBack }: AdminAuthProps) {
 
         <div className="card-glass p-8">
           <div className="flex items-center gap-3">
-            <span className="grid h-11 w-11 place-items-center rounded-xl bg-gradient-to-br from-gold-300 to-gold-500 text-navy-950 shadow-glow-gold">
-              <Building2 className="h-5 w-5" />
-            </span>
+            <img src="/kb-west-walk-logo.svg" alt="KB West Walk logo" className="h-14 w-14 rounded-lg bg-white object-contain" />
 
             <div>
-              <h1 className="font-display text-xl font-semibold text-white">
+              <h1 className="font-display text-xl font-semibold text-navy-50">
                 {BRAND.name} Admin
               </h1>
               <p className="text-xs text-gold-300/80">
@@ -85,7 +83,7 @@ export default function AdminAuth({ onSuccess, onBack }: AdminAuthProps) {
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full rounded-xl border border-white/10 bg-navy-950/50 py-3 pl-10 pr-4 text-sm text-white placeholder:text-navy-400 focus:border-gold-400/50 focus:outline-none"
+                  className="w-full rounded-xl border border-white/10 bg-navy-950/50 py-3 pl-10 pr-4 text-sm text-navy-50 placeholder:text-navy-400 focus:border-gold-400/50 focus:outline-none"
                   placeholder="admin@kbwestwalk.co"
                 />
               </div>
@@ -104,7 +102,7 @@ export default function AdminAuth({ onSuccess, onBack }: AdminAuthProps) {
                   required
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full rounded-xl border border-white/10 bg-navy-950/50 py-3 pl-10 pr-4 text-sm text-white placeholder:text-navy-400 focus:border-gold-400/50 focus:outline-none"
+                  className="w-full rounded-xl border border-white/10 bg-navy-950/50 py-3 pl-10 pr-4 text-sm text-navy-50 placeholder:text-navy-400 focus:border-gold-400/50 focus:outline-none"
                   placeholder="••••••••"
                 />
               </div>

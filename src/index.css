@@ -71,3 +71,34 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+
+/* KB West Walk white + deep-blue brand theme */
+body {
+  background: #ffffff !important;
+  color: #12364b !important;
+}
+::selection {
+  background: #c6dbe6 !important;
+  color: #12364b !important;
+}
+.site-main > section:not(#home) .text-white,
+footer .text-white,
+.min-h-screen.bg-navy-950 .text-white {
+  color: #12364b !important;
+}
+.site-main > section:not(#home) .text-navy-50,
+footer .text-navy-50,
+.min-h-screen.bg-navy-950 .text-navy-50 {
+  color: #12364b !important;
+}
+.site-main > section:not(#home) .border-white\/10,
+.site-main > section:not(#home) .border-white\/15,
+footer .border-white\/10,
+footer .border-white\/15 {
+  border-color: rgba(40, 81, 106, 0.16) !important;
+}
+footer .bg-white\/\[0\.03\],
+.site-main > section:not(#home) .bg-white\/\[0\.03\] {
+  background: #f2f7fa !important;
+}

@@ -1,4 +1,4 @@
-import { Building2, Phone, MapPin, Globe, FileBadge } from 'lucide-react';
+import { Phone, MapPin, Globe, FileBadge } from 'lucide-react';
 import { BRAND, CONTACT } from '@/lib/project';
 
 type FooterProps = {
@@ -19,16 +19,14 @@ export default function Footer({ onNavigate, onPrivacy, onBrochure }: FooterProp
   ];
 
   return (
-    <footer className="border-t border-white/10 bg-navy-950">
+    <footer className="border-t border-navy-700 bg-white">
       <div className="container-x py-14">
         <div className="grid gap-10 lg:grid-cols-[1.3fr_1fr_1fr]">
           <div>
             <div className="flex items-center gap-3">
-              <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-gold-300 to-gold-500 text-navy-950">
-                <Building2 className="h-5 w-5" />
-              </span>
+              <img src="/kb-west-walk-logo.svg" alt="KB West Walk logo" className="h-16 w-16 rounded-lg bg-white object-contain" />
               <div>
-                <p className="font-display text-lg font-semibold text-white">{BRAND.name}</p>
+                <p className="font-display text-lg font-semibold text-navy-50">{BRAND.name}</p>
                 <p className="text-xs text-gold-300/80">{BRAND.website}</p>
               </div>
             </div>
@@ -66,11 +64,11 @@ export default function Footer({ onNavigate, onPrivacy, onBrochure }: FooterProp
             <ul className="mt-4 space-y-3 text-sm text-navy-200">
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold-300" />
-                <span><strong className="text-white">Site:</strong> {CONTACT.siteOffice}</span>
+                <span><strong className="text-navy-50">Site:</strong> {CONTACT.siteOffice}</span>
               </li>
               <li className="flex items-start gap-2">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold-300" />
-                <span><strong className="text-white">Corporate:</strong> {CONTACT.corporateOffice}</span>
+                <span><strong className="text-navy-50">Corporate:</strong> {CONTACT.corporateOffice}</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 shrink-0 text-gold-300" />

@@ -18,8 +18,8 @@ export default function Hero({ onNavigate, onBrochure, onWhatsApp }: HeroProps) 
           className="h-full w-full object-cover object-center animate-kenburns"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-950/80 via-navy-950/55 to-navy-950" />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy-950/85 via-navy-950/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#12364b]/85 via-[#12364b]/65 to-[#12364b]/95" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#12364b]/85 via-[#12364b]/35 to-transparent" />
       </div>
 
       {/* Decorative gold line */}
@@ -83,7 +83,7 @@ export default function Hero({ onNavigate, onBrochure, onWhatsApp }: HeroProps) 
       </div>
 
       {/* Developer strip */}
-      <div className="relative mt-8 border-t border-white/10 bg-navy-950/70 backdrop-blur-md sm:absolute sm:bottom-0 sm:inset-x-0 sm:mt-0">
+      <div className="relative mt-8 border-t border-white/20 bg-[#12364b]/85 backdrop-blur-md sm:absolute sm:bottom-0 sm:inset-x-0 sm:mt-0">
         <div className="container-x flex flex-col items-center justify-between gap-2 py-3 text-center text-xs text-navy-200 sm:flex-row sm:text-left">
           <span>By {BRAND.developer}</span>
           <span className="text-gold-300/90">RERA: {CONTACT.rera}</span>

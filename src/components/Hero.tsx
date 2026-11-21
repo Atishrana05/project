@@ -61,7 +61,7 @@ export default function Hero({ onNavigate, onBrochure, onWhatsApp }: HeroProps) 
 
           {/* Quick contact strip */}
           <div
-            className="mt-10 flex flex-wrap items-center gap-4 text-sm text-navy-200 animate-fade-up"
+            className="mt-10 hidden flex-wrap items-center gap-4 text-sm text-navy-200 animate-fade-up sm:flex"
             style={{ animationDelay: '320ms' }}
           >
             <a href={`tel:${CONTACT.phones[0]}`} className="inline-flex items-center gap-2 transition hover:text-gold-200">

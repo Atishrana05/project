@@ -45,7 +45,7 @@ export default function Marketing({ onAdmin }: MarketingProps) {
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative pb-20 sm:pb-0">
       <Navbar onNavigate={scrollTo} onAdmin={onAdmin} />
 
       <main>

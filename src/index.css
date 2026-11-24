@@ -162,3 +162,47 @@ footer button,
 footer a {
   color: #294b60;
 }
+
+
+/* KB West Walk branded opening animation */
+.kb-intro {
+  animation: kb-intro-background-out 0.55s ease 2.25s forwards;
+}
+.kb-intro-content {
+  animation: kb-intro-exit 0.5s ease 2.15s forwards;
+}
+.kb-intro-logo {
+  opacity: 0;
+  transform: translateY(18px) scale(0.86);
+  animation: kb-logo-arrive 1.05s cubic-bezier(0.2, 0.75, 0.25, 1) 0.12s forwards;
+}
+.kb-intro-rule {
+  transform: scaleX(0);
+  transform-origin: center;
+  animation: kb-rule-draw 0.55s ease 1.05s forwards;
+}
+.kb-intro-tagline {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: kb-tagline-arrive 0.55s ease 1.3s forwards;
+}
+@keyframes kb-logo-arrive {
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes kb-rule-draw {
+  to { transform: scaleX(1); }
+}
+@keyframes kb-tagline-arrive {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes kb-intro-exit {
+  to { opacity: 0; transform: translateY(-8px) scale(1.02); }
+}
+@keyframes kb-intro-background-out {
+  to { opacity: 0; visibility: hidden; pointer-events: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .kb-intro, .kb-intro-content, .kb-intro-logo, .kb-intro-rule, .kb-intro-tagline {
+    animation: none !important;
+  }
+}

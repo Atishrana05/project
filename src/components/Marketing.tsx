@@ -79,7 +79,7 @@ export default function Marketing({ onAdmin }: MarketingProps) {
       )}
       <Navbar onNavigate={scrollTo} onAdmin={onAdmin} />
 
-      <main className="site-main">
+      <main className="site-main cinematic-flow">
         <Hero onNavigate={scrollTo} onBrochure={() => setBrochureOpen(true)} onWhatsApp={openWhatsApp} />
         <About />
         <Experience onEnquire={() => openEnquiry(undefined, 'brochure')} />

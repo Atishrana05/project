@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
@@ -22,10 +22,19 @@ type MarketingProps = {
 
 export default function Marketing({ onAdmin }: MarketingProps) {
   useReveal();
+  const [introVisible, setIntroVisible] = useState(
+    () => !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  );
   const [privacyOpen, setPrivacyOpen] = useState(false);
   const [brochureOpen, setBrochureOpen] = useState(false);
   const [enquiryOpen, setEnquiryOpen] = useState(false);
   const [enquiryDefaults, setEnquiryDefaults] = useState<{ interested_floor?: string; enquiry_type?: string }>({});
+
+  useEffect(() => {
+    if (!introVisible) return;
+    const timer = window.setTimeout(() => setIntroVisible(false), 2800);
+    return () => window.clearTimeout(timer);
+  }, [introVisible]);
 
   const scrollTo = useCallback((id: string) => {
     const el = document.getElementById(id);

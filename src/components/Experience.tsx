@@ -64,19 +64,19 @@ export default function Experience({ onEnquire }: ExperienceProps) {
           {ITEMS.map((it) => (
             <article
               key={it.title}
-              className="reveal group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]"
+              className="reveal feature-card group relative overflow-hidden rounded-2xl border border-[#28516a]/15 bg-white text-left"
             >
-              <div className="relative h-60 overflow-hidden">
-                <img
-                  src={it.image}
-                  alt={it.title}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/40 to-transparent" />
-                <div className="absolute left-4 top-4 grid h-10 w-10 place-items-center rounded-xl bg-navy-950/70 text-gold-300 backdrop-blur">
-                  <it.icon className="h-5 w-5" />
+              <div className="feature-visual relative flex h-60 items-center justify-center overflow-hidden">
+                <div className="feature-visual-orbit feature-orbit-one" />
+                <div className="feature-visual-orbit feature-orbit-two" />
+                <div className="feature-visual-panel feature-panel-back" />
+                <div className="feature-visual-panel feature-panel-front" />
+                <div className="feature-visual-icon relative z-10 grid h-20 w-20 place-items-center rounded-3xl bg-white text-[#174765] shadow-2xl">
+                  <it.icon className="h-9 w-9" strokeWidth={1.5} />
                 </div>
+                <span className="absolute bottom-4 left-5 z-10 text-[10px] font-semibold uppercase tracking-[0.28em] text-white/90">
+                  KB WEST WALK
+                </span>
               </div>
               <div className="p-6">
                 <h3 className="font-display text-xl font-semibold text-white">{it.title}</h3>

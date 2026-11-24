@@ -40,7 +40,7 @@ export default function About() {
             <img
               src={IMAGES.developerTower}
               alt="KB West Walk tower exterior"
-              className="h-[420px] w-full object-cover transition-transform duration-700 hover:scale-105"
+              className="about-render h-[420px] w-full object-cover transition-transform duration-700"
               loading="lazy"
             />
           </div>

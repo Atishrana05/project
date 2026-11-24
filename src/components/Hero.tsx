@@ -19,7 +19,8 @@ export default function Hero({ onNavigate, onBrochure, onWhatsApp }: HeroProps) 
           loading="eager"
         />
         <div className="hero-blue-wash absolute inset-0 bg-gradient-to-b from-[#12364b]/85 via-[#12364b]/65 to-[#12364b]/95" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#12364b]/85 via-[#12364b]/35 to-transparent" />\n        <div className="hero-depth-grid pointer-events-none absolute inset-0" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#12364b]/85 via-[#12364b]/35 to-transparent" />
+        <div className="hero-depth-grid pointer-events-none absolute inset-0" />
       </div>
 
       {/* Decorative gold line */}

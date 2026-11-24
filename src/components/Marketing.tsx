@@ -55,6 +55,28 @@ export default function Marketing({ onAdmin }: MarketingProps) {
 
   return (
     <div className="relative pb-20 sm:pb-0">
+      {introVisible && (
+        <div className="kb-intro fixed inset-0 z-[100] grid place-items-center bg-white" role="status" aria-label="KB West Walk">
+          <button
+            type="button"
+            onClick={() => setIntroVisible(false)}
+            className="absolute right-5 top-5 rounded-full border border-[#28516a]/25 px-4 py-2 text-xs font-semibold tracking-wide text-[#28516a] transition hover:bg-[#eef4f7]"
+          >
+            Skip
+          </button>
+          <div className="kb-intro-content flex flex-col items-center px-8 text-center">
+            <img
+              src="/kb-west-walk-logo.svg"
+              alt="KB West Walk"
+              className="kb-intro-logo h-52 w-52 object-contain sm:h-64 sm:w-64"
+            />
+            <div className="kb-intro-rule mt-5 h-[2px] w-20 rounded-full bg-[#28516a]" />
+            <p className="kb-intro-tagline mt-5 text-xs font-semibold uppercase tracking-[0.32em] text-[#28516a] sm:text-sm">
+              Every Step, A Story
+            </p>
+          </div>
+        </div>
+      )}
       <Navbar onNavigate={scrollTo} onAdmin={onAdmin} />
 
       <main className="site-main">

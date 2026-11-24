@@ -206,3 +206,113 @@ footer a {
     animation: none !important;
   }
 }
+
+
+/* Lightweight 3D-style motion using the supplied KB West Walk artwork */
+.hero-scene {
+  transform: scale(1.07);
+  transform-origin: 54% 48%;
+  animation: kb-hero-drift 18s ease-in-out infinite alternate;
+  will-change: transform;
+}
+.hero-depth-grid {
+  opacity: .16;
+  background-image: linear-gradient(rgba(255,255,255,.11) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.11) 1px, transparent 1px);
+  background-size: 84px 84px;
+  mask-image: linear-gradient(to bottom, transparent, #000 25%, #000 75%, transparent);
+  transform: perspective(800px) rotateX(58deg) scale(1.5) translateY(28%);
+  transform-origin: center bottom;
+  animation: kb-grid-drift 22s linear infinite;
+}
+@keyframes kb-hero-drift {
+  from { transform: scale(1.07) translate3d(-.4%, 0, 0); }
+  to { transform: scale(1.14) translate3d(.6%, -1%, 0); }
+}
+@keyframes kb-grid-drift {
+  from { background-position: 0 0, 0 0; }
+  to { background-position: 0 84px, 84px 0; }
+}
+.feature-card {
+  perspective: 1100px;
+  transform-style: preserve-3d;
+  box-shadow: 0 14px 38px rgba(18,54,75,.07);
+  transition: transform .55s cubic-bezier(.2,.75,.25,1), box-shadow .55s ease, border-color .4s ease;
+}
+.feature-card:hover {
+  transform: translateY(-8px) rotateX(2deg) rotateY(-2deg);
+  box-shadow: 0 28px 55px rgba(18,54,75,.16);
+  border-color: rgba(40,81,106,.38);
+}
+.feature-visual {
+  isolation: isolate;
+  background: radial-gradient(circle at 50% 45%, #dcebf2 0, #c5dce8 35%, #edf4f7 76%);
+  perspective: 900px;
+}
+.feature-visual::before {
+  content: "";
+  position: absolute;
+  inset: 18% 13%;
+  border: 1px solid rgba(23,71,101,.18);
+  border-radius: 28px;
+  transform: rotate(-9deg) translateZ(-20px);
+}
+.feature-visual::after {
+  content: "";
+  position: absolute;
+  width: 210px;
+  height: 210px;
+  border: 1px solid rgba(23,71,101,.18);
+  border-radius: 50%;
+  transform: translateZ(-35px);
+}
+.feature-visual-orbit {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  border: 1px solid rgba(23,71,101,.22);
+  border-radius: 28px;
+  transform-style: preserve-3d;
+}
+.feature-orbit-one { transform: rotate(32deg) rotateX(58deg) translateZ(-20px); }
+.feature-orbit-two { transform: rotate(-28deg) rotateX(58deg) translateZ(-40px); }
+.feature-visual-panel {
+  position: absolute;
+  width: 118px;
+  height: 142px;
+  border: 1px solid rgba(255,255,255,.85);
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(255,255,255,.88), rgba(160,195,213,.72));
+  box-shadow: 0 18px 32px rgba(18,54,75,.12);
+}
+.feature-panel-back { transform: translate(-24px, -10px) rotateY(-28deg) rotateX(10deg) translateZ(-12px); }
+.feature-panel-front { transform: translate(25px, 12px) rotateY(24deg) rotateX(-7deg) translateZ(18px); }
+.feature-visual-icon {
+  transform: translateZ(55px);
+  transition: transform .55s cubic-bezier(.2,.75,.25,1);
+}
+.feature-card:hover .feature-visual-icon { transform: translateZ(78px) scale(1.06); }
+.about-render {
+  transform: scale(1.02);
+  transition: transform 1s cubic-bezier(.2,.75,.25,1), filter 1s ease;
+}
+.about-render:hover { transform: scale(1.075) rotateY(-2deg); filter: saturate(1.08); }
+.floorplan-card {
+  perspective: 1000px;
+  box-shadow: 0 12px 32px rgba(18,54,75,.07);
+}
+.floorplan-card:hover {
+  transform: translateY(-7px) rotateX(2deg);
+  box-shadow: 0 24px 45px rgba(18,54,75,.14);
+}
+.floorplan-image { transform-origin: center; }
+@media (max-width: 767px) {
+  .hero-scene { animation-duration: 24s; }
+  .hero-depth-grid { opacity: .08; background-size: 110px 110px; }
+  .feature-card:hover, .floorplan-card:hover { transform: none; }
+  .feature-visual { height: 190px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-scene, .hero-depth-grid { animation: none !important; transform: none !important; }
+  .feature-card, .about-render, .floorplan-card, .feature-visual-icon { transition: none !important; }
+  .feature-card:hover, .floorplan-card:hover, .about-render:hover { transform: none !important; }
+}

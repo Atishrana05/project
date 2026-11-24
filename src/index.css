@@ -316,3 +316,71 @@ footer a {
   .feature-card, .about-render, .floorplan-card, .feature-visual-icon { transition: none !important; }
   .feature-card:hover, .floorplan-card:hover, .about-render:hover { transform: none !important; }
 }
+
+
+/* Cinematic section transitions and restored image gallery */
+.cinematic-flow > section {
+  position: relative;
+  isolation: isolate;
+}
+.cinematic-flow > section:not(#home)::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 0%, rgba(198,219,230,.26), transparent 58%);
+  opacity: .7;
+}
+.reveal {
+  opacity: 0;
+  filter: blur(5px);
+  transform: perspective(1100px) translate3d(0, 34px, 0) scale(.985);
+  transition:
+    opacity .85s cubic-bezier(.2,.7,.2,1),
+    transform .95s cubic-bezier(.2,.7,.2,1),
+    filter .85s ease;
+  will-change: opacity, transform, filter;
+}
+.reveal.is-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform: perspective(1100px) translate3d(0, 0, 0) scale(1);
+}
+.reveal.is-visible:nth-child(2) { transition-delay: .06s; }
+.reveal.is-visible:nth-child(3) { transition-delay: .12s; }
+.reveal.is-visible:nth-child(4) { transition-delay: .18s; }
+.experience-image {
+  isolation: isolate;
+  perspective: 1000px;
+  background: #dcebf2;
+}
+.experience-image img {
+  transform: scale(1.015);
+  transition: transform .9s cubic-bezier(.2,.75,.25,1), filter .9s ease;
+}
+.experience-image:hover img,
+.experience-image:focus-visible img {
+  transform: scale(1.09) rotate(.4deg);
+  filter: saturate(1.08) contrast(1.02);
+}
+.feature-card {
+  overflow: hidden;
+  transition: transform .65s cubic-bezier(.2,.75,.25,1), box-shadow .65s ease, border-color .45s ease;
+}
+.feature-card:hover {
+  transform: translateY(-9px) rotateX(1.2deg);
+  box-shadow: 0 26px 58px rgba(18,54,75,.16);
+}
+@media (max-width: 767px) {
+  .reveal { filter: none; transform: translate3d(0, 18px, 0); transition-duration: .65s; }
+  .feature-card:hover { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal.is-visible, .experience-image img, .feature-card {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

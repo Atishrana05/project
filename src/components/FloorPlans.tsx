@@ -55,13 +55,13 @@ export default function FloorPlans() {
             <button
               key={fp.id}
               onClick={() => open(i)}
-              className="reveal group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] text-left transition hover:border-gold-400/40"
+              className="reveal floorplan-card group relative overflow-hidden rounded-2xl border border-[#28516a]/20 bg-white text-left transition"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
                   src={fp.image}
                   alt={`${fp.label} floor plan`}
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="floorplan-image h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy-950/90 via-navy-950/20 to-transparent" />

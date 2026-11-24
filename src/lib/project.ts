@@ -57,6 +57,41 @@ export const FLOOR_PLANS: { id: string; label: string; image: string }[] = [
     label: 'Ground Floor',
     image: '/floor-plans/ground-floor.png',
   },
+  {
+    id: 'first',
+    label: 'First Floor',
+    image: '/floor-plans/first-floor.webp',
+  },
+  {
+    id: 'second',
+    label: 'Second Floor',
+    image: '/floor-plans/second-floor.webp',
+  },
+  {
+    id: 'third',
+    label: 'Third Floor',
+    image: '/floor-plans/third-floor.webp',
+  },
+  {
+    id: 'fourth',
+    label: 'Fourth Floor – Food Court',
+    image: '/floor-plans/fourth-floor.webp',
+  },
+  {
+    id: 'fifth',
+    label: 'Fifth Floor',
+    image: '/floor-plans/fifth-floor.webp',
+  },
+  {
+    id: 'seventh',
+    label: 'Seventh Floor',
+    image: '/floor-plans/seventh-floor.webp',
+  },
+  {
+    id: 'typical-studio',
+    label: 'Typical Studio Floor Plan',
+    image: '/floor-plans/typical-studio-floor.webp',
+  },
 ];
 
 export type FloorPricing = {
